@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-11.0
-  DEVICE: X655C
-  DT_LINK: https://github.com/kies83/recovery_device_infinix_x655c
-  DT_PATH: device/infinix/X655C
+  MANIFEST: https://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
+  DEVICE: YTX705
+  DT_LINK: https://github.com/worldbreakerinmortal/twrp_device_lenovo_YTX705
+  DT_PATH: device/lenovo/YTX705
   TARGET: recoveryimage
   TZ: Asia/Karachi
 
@@ -62,7 +62,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: TWRP_PITCHBLACK_10.0
-          name: TWRP-X655C
+          tag_name: TWRP_PITCHBLACK_9.0
+          name: TWRP-YTX705
           files: | 
-            work/out/target/product/X655C/recovery.img
+            work/out/target/product/YTX705/recovery.img
